@@ -1,4 +1,8 @@
 # time complexity: O(n), because each node is visited only once
+# In depth first search, there are 3 ways of traversals
+# 1. inorder => left -> root -> right(this is in sorted order in binary search tree)
+# 2. preorder => root -> left -> right
+# 3. postorder => left -> right -> root
 class Node:
     def __init__(self, val):
         self.val = val
