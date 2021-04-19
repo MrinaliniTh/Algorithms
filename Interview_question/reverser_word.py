@@ -10,7 +10,7 @@ def reverse_word(s1):
             continue
         final_string += s1[i]
     return res + final_string
-# approach 2
+# approach 2, using stack
 def reverse_word2(sentence):
     stack = []
     res = ''

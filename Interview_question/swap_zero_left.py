@@ -17,4 +17,4 @@ def swap_zero_to_left2(nums):
         else:
             i += 1
     return nums
-print(swap_zero_to_left2([1,4,0,5,7,0,2,4,5]))
+print(swap_zero_to_left2([1,3,5,0,4,0,6,0]))
