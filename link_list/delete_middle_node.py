@@ -31,6 +31,20 @@ class LinkedList:
                 temp = temp.next
         return data
 
+    def delete_node_at_middle(self):
+        slow = self.head
+        fast = self.head
+        prev = None
+        if not self.head:
+            return None
+        if not self.head:
+            self.head = None
+        while(fast and fast.next):
+            prev = slow
+            slow = slow.next
+            fast = fast.next.next
+        prev.next = slow.next
+
     # def find_lenght(self):
     #     count = 1
     #     temp = self.head
@@ -58,22 +72,6 @@ class LinkedList:
     #         temp.next = next_nodes
     #         deleted_node = None
 
-    def delete_node_at_middle(self):
-        slow = self.head
-        fast = self.head
-        prev = None
-        if not self.head:
-            return None
-        if not self.head:
-            self.head = None
-        while(fast and fast.next):
-            prev = slow
-            slow = slow.next
-            fast = fast.next.next
-        prev.next = slow.next
-            
-
-
 
 node = LinkedList()
 # creation of link list
@@ -82,7 +80,7 @@ node.create_link_list(2)
 node.create_link_list(3)
 node.create_link_list(4)
 node.create_link_list(5)
-node.create_link_list(6)
+# node.create_link_list(6)
 print(node.print_link_list())
 
 # print(node.find_lenght())

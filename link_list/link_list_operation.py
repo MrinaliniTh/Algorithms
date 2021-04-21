@@ -65,6 +65,17 @@ class LinkedList:
             deleted_node = temp.next
             temp.next = temp.next.next
             deleted_node = None
+
+    def reverse_list(self):
+        # import pdb;pdb.set_trace()
+        prev = None
+        current = self.head
+        while current:
+            temp = current.next
+            current.next = prev
+            prev = current
+            current = temp
+        self.head = prev
             
 
 node = LinkedList()
@@ -77,20 +88,23 @@ node.create_link_list(5)
 print(node.print_link_list())
 
 # insert at beginning
-node.insert_at_beginning(0)
-print(node.print_link_list())
+# node.insert_at_beginning(0)
+# print(node.print_link_list())
 
 # insert at end
-node.insert_at_end(6)
-print(node.print_link_list())
+# node.insert_at_end(6)
+# print(node.print_link_list())
 
 # insert at position
-node.insert_at_pos(10, 2)
-print(node.print_link_list())
+# node.insert_at_pos(10, 2)
+# print(node.print_link_list())
 
 # delete node
-node.delete_node(0)
-print(node.print_link_list())
+# node.delete_node(0)
+# print(node.print_link_list())
 
+#reverse link list
+node.reverse_list()
+print(node.print_link_list())
 
 
