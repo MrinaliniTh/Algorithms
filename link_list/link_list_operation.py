@@ -76,7 +76,14 @@ class LinkedList:
             prev = current
             current = temp
         self.head = prev
-            
+
+    def search(self, node, key, index):
+        if not node:
+            return -1
+        if node.val == key:
+            return index
+        return self.search(node.next, key, index+1)
+
 
 node = LinkedList()
 # creation of link list
@@ -104,7 +111,9 @@ print(node.print_link_list())
 # print(node.print_link_list())
 
 #reverse link list
-node.reverse_list()
-print(node.print_link_list())
+# node.reverse_list()
+# print(node.print_link_list())
+
+print(node.search(node.head, 5, 0))
 
 
