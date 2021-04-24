@@ -32,6 +32,30 @@ class BinaryTree:
             res += str(root.val) + "-"
         return res
 
+    def inorder_iterartive(self, root):
+        res = []
+        stack = []
+        while root:
+            stack.append(root)
+            root = root.left
+            while root is None and stack:
+                cur = stack.pop()
+                res.append(cur.val)
+                root = cur.right
+        return res
+
+    def preorder_iterative(self, root):
+        res = []
+        stack = []
+        while root:
+            res.append(root.val)
+            stack.append(root)
+            root = root.left
+            while root is None and stack:
+                cur = stack.pop()
+                root = cur.right
+        return res
+
 tree = Node(1)
 tree.left = Node(2)
 tree.right = Node(3)
@@ -43,3 +67,5 @@ binary_tree = BinaryTree()
 print(binary_tree.inorder_traversal(tree, ""))
 print(binary_tree.preorder_traversal(tree, ""))
 print(binary_tree.postorder_traversal(tree, ""))
+print(binary_tree.inorder_iterartive(tree))
+print(binary_tree.preorder_iterative(tree))
