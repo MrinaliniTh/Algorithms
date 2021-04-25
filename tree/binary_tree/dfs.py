@@ -56,6 +56,24 @@ class BinaryTree:
                 root = cur.right
         return res
 
+    def postorder_iterative(self, root):
+        stack = []
+        visited = set()
+        res = []
+        while root:
+            stack.append(root)
+            root = root.left
+            while root is None and stack:
+                cur = stack.pop()
+                if cur.right and cur.val not in visited:
+                    visited.add(cur.val)
+                    stack.append(cur)
+                    root = cur.right
+                else:
+                    res.append(cur.val)
+                    root = None
+        return res
+
 tree = Node(1)
 tree.left = Node(2)
 tree.right = Node(3)
@@ -69,3 +87,4 @@ print(binary_tree.preorder_traversal(tree, ""))
 print(binary_tree.postorder_traversal(tree, ""))
 print(binary_tree.inorder_iterartive(tree))
 print(binary_tree.preorder_iterative(tree))
+print(binary_tree.postorder_iterative(tree))
