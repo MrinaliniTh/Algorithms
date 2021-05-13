@@ -37,4 +37,4 @@ def two_sum_array_using_two_pointer(nums, target):
                 high -= 1
     return res
 
-print(two_sum_array_using_two_pointer([-6,-2, 2,7,11,15], 9))
+print(two_sum_array_using_two_pointer([-1,0,1,2,1,-4], -3))

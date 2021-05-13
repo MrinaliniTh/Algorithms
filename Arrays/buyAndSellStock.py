@@ -22,3 +22,15 @@ def buy_and_sell_stock(prices:list)->int:
     return sale_stock
 
 print(buy_and_sell_stock([7,3,5,1,6,4]))
+
+#Using DP
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        dp = [0] * (len(prices)+1)
+        profit = 0
+        dp[0] = float(inf)
+        for i in range(1, len(dp)):
+            dp[i] = min(dp[i-1], prices[i-1])
+            profit = max(profit, prices[i - 1] - dp[i])
+        return profit
+        
