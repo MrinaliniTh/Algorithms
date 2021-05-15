@@ -27,3 +27,4 @@ def max_contiguous_subarray_sum(arr, sum):
 arr = [2,5,3,10,6]
 sum = 6
 print(max_contiguous_subarray_sum(arr, sum))
+# Above soulution cannot handle negative case, for that check leetcode560.py
