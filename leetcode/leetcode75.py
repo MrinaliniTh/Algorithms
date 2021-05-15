@@ -1,6 +1,6 @@
 #  O(n) time and O(1) space, usinf 3 pointers, left to track 0, right to track 2 and index for iteration
 class Solution:
-    def sortColors(self, nums: List[int]) -> None:
+    def sortColors(self, nums) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -18,7 +18,7 @@ class Solution:
                 index += 1
  # O(n) time and O(1) space, using add and subtract logic
 class Solution:
-    def sortColors(self, nums: List[int]) -> None:
+    def sortColors(self, nums) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """

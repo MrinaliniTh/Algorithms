@@ -1,5 +1,5 @@
 class Solution:
-    def subarraySum(self, arr: List[int], k: int) -> int:
+    def subarraySum(self, arr, k: int) -> int:
         temp_dict = {0 : 1}
         sum = 0
         count = 0
