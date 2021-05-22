@@ -8,13 +8,12 @@ def swap_zero_to_left(nums):
     return nums + temp_list
 # approach 2
 def swap_zero_to_left2(nums):
-    i = 0
-    j = len(nums) - 1
-    while i < j:
-        if nums[i] == 0:
-            nums[i], nums[j] = nums[j], nums[i]
-            j -= 1
-        else:
-            i += 1
+    left = 0 
+    right = 0
+    while left < len(nums):
+        if nums[left] != 0:
+            nums[right],nums[left] = nums[left], nums[right]
+            right += 1
+        left += 1
     return nums
 print(swap_zero_to_left2([1,3,5,0,4,0,6,0]))
