@@ -10,7 +10,7 @@
 # space complexity: O(n)
 # time complexity: O(n)
 class Solution:
-    def rob(self, nums: List[int]) -> int:
+    def rob(self, nums) -> int:
         if not nums:
             return 0
         if len(nums) <= 3: return max(nums)
