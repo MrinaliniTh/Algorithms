@@ -1,0 +1,5 @@
+def missingNumber(self, nums) -> int:
+    i = 0
+    while i in nums:
+        i += 1
+    return i
