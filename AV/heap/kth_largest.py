@@ -6,6 +6,6 @@ def kth_largest_value(array, k):
         if len(heap) > k:
             heapq.heappop(heap)
     print(heap)
-    return heap[0]
+    return heapq.heappop(heap)
 
-print(kth_largest_value([10, 2, 5, 3, 9], 2))
+print(kth_largest_value([10, 2, 5, 6, 9, 11], 2))
